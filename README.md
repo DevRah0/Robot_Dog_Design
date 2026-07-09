@@ -1,5 +1,5 @@
-#  مشروع التصميم الميكانيكي الأولي لكلب روبوتي
-#  Mechanical Design Prototype for a Quadruped Robot Dog
+# مشروع التصميم الميكانيكي الأولي لكلب روبوتي
+# Mechanical Design Prototype for a Quadruped Robot Dog
 
 ---
 
@@ -22,10 +22,18 @@
 * **آلية توازن ديناميكي إضافية (ذيل خلفي):** تم دمج امتداد خلفي علوي (على شكل ذيل عقرب) كميزة تجريبية مبتكرة تعمل كثقل موازن ديناميكي (Dynamic Counterweight) للمساعدة في تعديل مركز الجاذبية ومنع الانقلاب أثناء الحركة البندولية للأرجل.
 
 ### 📊 الحسابات المبدئية والعزم (Torque Analysis)
-* **الوزن التقريبي المتوقع:** 250 جرام.
-* **طول الفخذ (ذراع العزم المفترض):** 4 سم.
-* **العزم المطلوب عند الوقوف الثابت:** 0.5 kg.cm تقريباً.
-* **كفاءة المحرك:** يقدم محرك SG90 عزماً يصل إلى 1.8 kg.cm، وهو كافٍ جداً لدعم كتلة الروبوت وديناميكية حركته البندولية.
+لضمان قدرة المحركات على دعم جسم الروبوت أثناء الوقوف الثابت، تم حساب العزم المطلوب ($T$) عند مفصل الفخذ بناءً على المعادلة التالية:
+
+$$T = F \times L$$
+
+حيث أن:
+* **القوة المؤثرة ($F$):** بفرض أن كتلة الروبوت التقريبية $M = 250\text{ g}$، وتتوزع بالتساوي على الأرجل عند الوقوف الثابت، فإن القوة لكل رجل تساوي تقريباً $0.125\text{ kg}$.
+* **طول ذراع العزم ($L$):** طول الفخذ الممتد أفقياً يساوي $4\text{ cm}$.
+
+**حساب العزم المطلوب:**
+$$T = 0.125\text{ kg} \times 4\text{ cm} = 0.5\text{ kg.cm}$$
+
+* **كفاءة المحرك:** يقدم محرك سيرفو SG90 عزماً أقصى يصل إلى $1.8\text{ kg.cm}$، وبمقارنته بالعزم المطلوب ($0.5\text{ kg.cm}$)، نجد أن المحرك كافٍ جداً وفيه عامل أمان (Safety Factor) ممتاز لدعم وزن الروبوت وديناميكية حركته.
 
 ### 🔄 آلية الحركة والاتزان المقترحة (Gait & Balance)
 * **نمط المشي:** نمط الزحف الرباعي المستقر استاتيكياً (Static Crawl Gait) عن طريق تحريك رجل واحدة في كل خطوة، مما يضمن بقاء مركز الجاذبية دائماً داخل مثلث الدعم المكون من الثلاث أرجل الأخرى الملامسة للأرض.
@@ -37,7 +45,7 @@
 
 ### 🚀 الحلول والتطويرات المستقبلية (Future Enhancements)
 * دمج نظام تعليق ميكانيكي مرن (Suspension System) لامتصاص الصدمات وحماية التروس.
-* إضافة طبقة مطاطية أو آلية أقدام متدحرجة (Rolling Feet) أسفل الأرجل لزيادة الاحتكاخ ومنع الانزلاق.
+* إضافة طبقة مطاطية أو آلية أقدام متدحرجة (Rolling Feet) أسفل الأرجل لزيادة الاحتكاك ومنع الانزلاق.
 
 ---
 
@@ -60,10 +68,18 @@ This repository contains the initial mechanical design and kinematic analysis of
 * **Active Counterweight (Tail Mechanism):** An upper rear extension (scorpion-tail style) was integrated as an innovative experimental feature to act as a dynamic counterweight. This mechanism helps dynamically shift the Center of Mass and enhance stabilization during walking gaits.
 
 ### 📊 Preliminary Torque Analysis
-* **Estimated Weight:** ~250 grams.
-* **Thigh Length (Lever Arm):** 4 cm.
-* **Required Holding Torque:** ~0.5 kg.cm.
-* **Actuator Capacity:** The SG90 servo provides up to 1.8 kg.cm of torque, which is more than sufficient to support the robot's weight and dynamic pendulum gait.
+To ensure the actuators can support the robot during a static stand, the required torque ($T$) at the hip joint is calculated using the following equation:
+
+$$T = F \times L$$
+
+Where:
+* **Acting Force ($F$):** Assuming the total estimated weight is $M = 250\text{ g}$, distributed evenly across the legs during a static stand, the force per leg is approximately $0.125\text{ kg}$.
+* **Lever Arm ($L$):** The horizontal extension length of the thigh is $4\text{ cm}$.
+
+**Torque Calculation:**
+$$T = 0.125\text{ kg} \times 4\text{ cm} = 0.5\text{ kg.cm}$$
+
+* **Actuator Capacity:** The SG90 micro servo provides a stall torque of up to $1.8\text{ kg.cm}$. Comparing this to the required torque ($0.5\text{ kg.cm}$), the actuator is highly capable and offers an excellent Safety Factor to support the robot's mass and dynamic movements.
 
 ### 🔄 Locomotion & Stability (Gait & Balance)
 * **Gait Pattern:** Utilizes a statically stable **Static Crawl Gait**, moving one leg at a time to ensure the Center of Mass remains within the support triangle formed by the other three legs.
