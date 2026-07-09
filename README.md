@@ -1,5 +1,5 @@
-# مشروع التصميم الميكانيكي الأولي لكلب روبوتي
-# Mechanical Design Prototype for a Quadruped Robot Dog
+# 🇸🇦 مشروع التصميم الميكانيكي الأولي لكلب روبوتي
+# 🇬🇧 Mechanical Design Prototype for a Quadruped Robot Dog
 
 ---
 
@@ -22,18 +22,16 @@
 * **آلية توازن ديناميكي إضافية (ذيل خلفي):** تم دمج امتداد خلفي علوي (على شكل ذيل عقرب) كميزة تجريبية مبتكرة تعمل كثقل موازن ديناميكي (Dynamic Counterweight) للمساعدة في تعديل مركز الجاذبية ومنع الانقلاب أثناء الحركة البندولية للأرجل.
 
 ### 📊 الحسابات المبدئية والعزم (Torque Analysis)
-لضمان قدرة المحركات على دعم جسم الروبوت أثناء الوقوف الثابت، تم حساب العزم المطلوب ($T$) عند مفصل الفخذ بناءً على المعادلة التالية:
+لضمان قدرة المحركات على دعم جسم الروبوت أثناء الوقوف الثابت، تم حساب العزم المطلوب بناءً على القانون التالي:
 
-$$T = F \times L$$
+* **قانون العزم:** العزم = القوة × ذراع العزم
+* **القوة المؤثرة:** بفرض أن كتلة الروبوت التقريبية هي 250 جرام، وتتوزع بالتساوي على الأرجل عند الوقوف الثابت، فإن القوة لكل رجل تساوي تقريباً 0.125 كيلوجرام.
+* **طول ذراع العزم:** طول الفخذ الممتد أفقياً يساوي 4 سنتيمتر.
 
-حيث أن:
-* **القوة المؤثرة ($F$):** بفرض أن كتلة الروبوت التقريبية $M = 250\text{ g}$، وتتوزع بالتساوي على الأرجل عند الوقوف الثابت، فإن القوة لكل رجل تساوي تقريباً $0.125\text{ kg}$.
-* **طول ذراع العزم ($L$):** طول الفخذ الممتد أفقياً يساوي $4\text{ cm}$.
+**معادلة حساب العزم المطلوب:**
+* العزم = 0.125 كيلوجرام × 4 سنتيمتر = 0.5 kg.cm
 
-**حساب العزم المطلوب:**
-$$T = 0.125\text{ kg} \times 4\text{ cm} = 0.5\text{ kg.cm}$$
-
-* **كفاءة المحرك:** يقدم محرك سيرفو SG90 عزماً أقصى يصل إلى $1.8\text{ kg.cm}$، وبمقارنته بالعزم المطلوب ($0.5\text{ kg.cm}$)، نجد أن المحرك كافٍ جداً وفيه عامل أمان (Safety Factor) ممتاز لدعم وزن الروبوت وديناميكية حركته.
+* **كفاءة المحرك:** يقدم محرك سيرفو SG90 عزماً أقصى يصل إلى 1.8 kg.cm، وبمقارنته بالعزم المطلوب (0.5 kg.cm)، نجد أن المحرك كافٍ جداً وفيه عامل أمان (Safety Factor) ممتاز لدعم وزن الروبوت وديناميكية حركته.
 
 ### 🔄 آلية الحركة والاتزان المقترحة (Gait & Balance)
 * **نمط المشي:** نمط الزحف الرباعي المستقر استاتيكياً (Static Crawl Gait) عن طريق تحريك رجل واحدة في كل خطوة، مما يضمن بقاء مركز الجاذبية دائماً داخل مثلث الدعم المكون من الثلاث أرجل الأخرى الملامسة للأرض.
@@ -68,18 +66,16 @@ This repository contains the initial mechanical design and kinematic analysis of
 * **Active Counterweight (Tail Mechanism):** An upper rear extension (scorpion-tail style) was integrated as an innovative experimental feature to act as a dynamic counterweight. This mechanism helps dynamically shift the Center of Mass and enhance stabilization during walking gaits.
 
 ### 📊 Preliminary Torque Analysis
-To ensure the actuators can support the robot during a static stand, the required torque ($T$) at the hip joint is calculated using the following equation:
+To ensure the actuators can support the robot during a static stand, the required torque is calculated using the following engineering formula:
 
-$$T = F \times L$$
-
-Where:
-* **Acting Force ($F$):** Assuming the total estimated weight is $M = 250\text{ g}$, distributed evenly across the legs during a static stand, the force per leg is approximately $0.125\text{ kg}$.
-* **Lever Arm ($L$):** The horizontal extension length of the thigh is $4\text{ cm}$.
+* **Torque Formula:** Torque = Force × Lever Arm
+* **Acting Force:** Assuming the total estimated weight is 250 grams, distributed evenly across the legs during a static stand, the force per leg is approximately 0.125 kg.
+* **Lever Arm:** The horizontal extension length of the thigh is 4 cm.
 
 **Torque Calculation:**
-$$T = 0.125\text{ kg} \times 4\text{ cm} = 0.5\text{ kg.cm}$$
+* Required Torque = 0.125 kg × 4 cm = 0.5 kg.cm
 
-* **Actuator Capacity:** The SG90 micro servo provides a stall torque of up to $1.8\text{ kg.cm}$. Comparing this to the required torque ($0.5\text{ kg.cm}$), the actuator is highly capable and offers an excellent Safety Factor to support the robot's mass and dynamic movements.
+* **Actuator Capacity:** The SG90 micro servo provides a stall torque of up to 1.8 kg.cm. Comparing this to the required torque (0.5 kg.cm), the actuator is highly capable and offers an excellent Safety Factor to support the robot's mass and dynamic movements.
 
 ### 🔄 Locomotion & Stability (Gait & Balance)
 * **Gait Pattern:** Utilizes a statically stable **Static Crawl Gait**, moving one leg at a time to ensure the Center of Mass remains within the support triangle formed by the other three legs.
