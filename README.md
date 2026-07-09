@@ -19,6 +19,7 @@
 * **الهيكل الرئيسي:** صندوق متناظر مصمم بعناية لاستيعاب المكونات الإلكترونية والبطارية في المنتصف لضمان توازن مركز الجاذبية (Center of Mass).
 * **الأرجل ودرجات الحرية (Legs & DOF):** تصميم يعتمد على مفصلين لكل رجل، بمجموع درجتي حرية (2-DOF) لكل رجل للحركة البندولية الفعالة، مما يجعل مجموع المفاصل الكلي للروبوت 4 مفاصل متحركة.
 * **نظام الدفع والمحركات:** يعتمد التصميم الحالي على محركات سيرفو من نوع SG90 (عدد 4 محركات تثبت عند الفخذ/الحوض).
+* **آلية توازن ديناميكي إضافية (ذيل خلفي):** تم دمج امتداد خلفي علوي (على شكل ذيل عقرب) كميزة تجريبية مبتكرة تعمل كثقل موازن ديناميكي (Dynamic Counterweight) للمساعدة في تعديل مركز الجاذبية ومنع الانقلاب أثناء الحركة البندولية للأرجل.
 
 ### 📊 الحسابات المبدئية والعزم (Torque Analysis)
 * **الوزن التقريبي المتوقع:** 250 جرام.
@@ -36,7 +37,7 @@
 
 ### 🚀 الحلول والتطويرات المستقبلية (Future Enhancements)
 * دمج نظام تعليق ميكانيكي مرن (Suspension System) لامتصاص الصدمات وحماية التروس.
-* إضافة طبقة مطاطية أو آلية أقدام متدحرجة (Rolling Feet) أسفل الأرجل لزيادة الاحتكاك ومنع الانزلاق.
+* إضافة طبقة مطاطية أو آلية أقدام متدحرجة (Rolling Feet) أسفل الأرجل لزيادة الاحتكاخ ومنع الانزلاق.
 
 ---
 
@@ -56,6 +57,7 @@ This repository contains the initial mechanical design and kinematic analysis of
 * **Main Chassis:** A symmetrical body designed to house the electronics and battery in the center to maintain a stable Center of Mass (CoM).
 * **Legs & Degrees of Freedom (DOF):** A 2-jointed leg design providing 2 Degrees of Freedom (2-DOF) per leg for efficient pendulum movement, totaling 4 active joints across the robot.
 * **Actuators:** The current setup utilizes 4x SG90 micro servo motors mounted at the hip joints.
+* **Active Counterweight (Tail Mechanism):** An upper rear extension (scorpion-tail style) was integrated as an innovative experimental feature to act as a dynamic counterweight. This mechanism helps dynamically shift the Center of Mass and enhance stabilization during walking gaits.
 
 ### 📊 Preliminary Torque Analysis
 * **Estimated Weight:** ~250 grams.
