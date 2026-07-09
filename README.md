@@ -1,5 +1,5 @@
-# 🇸🇦 مشروع التصميم الميكانيكي الأولي لكلب روبوتي
-# 🇬🇧 Mechanical Design Prototype for a Quadruped Robot Dog
+#  مشروع التصميم الميكانيكي الأولي لكلب روبوتي
+#  Mechanical Design Prototype for a Quadruped Robot Dog
 
 ---
 
