@@ -3,8 +3,8 @@
 # مشروع التصميم الميكانيكي الأولي لكلب روبوتي
 
 ---
-
-هذا المستودع يحتوي على التصميم الميكانيكي الأولي والتحليل الحركي لنموذج كلب روبوتي رباعي الأرجل تم تصميمه ميكانيكياً باستخدام برنامج أوتوديسك فيوجن 360. تم الحفاظ على أجزاء المجسم كأجسام منفصلة دون دمجها لتسهيل عمليات التعديل والتطوير المستقبلي.
+هذا المستودع يحتوي على التصميم الميكانيكي الأولي والتحليل الحركي لنموذج كلب روبوتي رباعي الأرجل. تم تصميم النموذج ميكانيكياً باستخدام **Autodesk Fusion 360**، ثم تم استيراده إلى **Onshape** لإدارة النموذج وتصدير جميع الأجزاء بصيغة **STL**. تم الحفاظ على أجزاء المجسم كأجسام منفصلة دون دمجها لتسهيل عمليات التعديل والتطوير المستقبلي.
+.
 
 ### 🔗 رابط نموذج Onshape
 
@@ -62,7 +62,8 @@
 
 ---
 
-This repository contains the initial mechanical design and kinematic analysis of a quadruped robot dog prototype, modeled using Autodesk Fusion 360. All parts have been kept as separate bodies (without combining) to allow flexible future modifications and development.
+This repository contains the initial mechanical design and kinematic analysis of a quadruped robot dog prototype. The model was mechanically designed using **Autodesk Fusion 360**, then imported into **Onshape** for model management and exporting all components as **STL** files. All parts have been kept as separate bodies (without combining) to allow flexible future modifications and development.
+
 
 ### 🔗 Onshape Model
 
