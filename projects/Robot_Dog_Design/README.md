@@ -51,7 +51,7 @@ All robot components have been exported as individual **STL** files and are avai
 #### Top View
 #### المنظور العلوي
 
-![Robot Top View](projects/top_view.png)
+![Robot Top View](top_view.png)
 
 
 #### Side View
