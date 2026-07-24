@@ -51,12 +51,13 @@ All robot components have been exported as individual **STL** files and are avai
 #### Top View
 #### المنظور العلوي
 
-![Robot Top View](top_view.bmp)
+![Robot Top View](projects/Robot_Dog_Design/top_view.bmp)
+
 
 #### Side View
 #### المنظور الجانبي
 
-![Robot Side View](side_view.bmp)
+![Robot Side View](projects/Robot_Dog_Design/side_view.bmp)
 
 ---
 
